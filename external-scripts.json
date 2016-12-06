@@ -8,5 +8,7 @@
   "hubot-maps",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-who-am-i"
+  "hubot-who-am-i",
+  "hubot-redis-brain",
+  "hubot-mongodb-brain"
 ]
