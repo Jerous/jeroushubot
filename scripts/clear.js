@@ -34,10 +34,6 @@ module.exports = function (robot) {
   });
 
   robot.hear(/好手氣/, function (res) {
-    function shuffle(job,finalJob) {
-      var num = Math.random() > 0.5 ? -1:1;
-      return num;
-    }
     job.shuffle();
     for (var i = 0; i < job.length; i++) {
       res.send(people[i] + '：' + job[i]);
