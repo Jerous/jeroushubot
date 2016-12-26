@@ -154,3 +154,7 @@ can then run hubot with the adapter.
 Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
 
 [hubot-adapters]: https://github.com/github/hubot/blob/master/docs/adapters.md
+
+## tellustek-script
+
+好手氣，抽打掃用
