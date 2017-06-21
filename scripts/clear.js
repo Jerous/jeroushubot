@@ -1,6 +1,6 @@
 module.exports = function (robot) {
 
-  var job = ['掃地', '拖地', '水槽擦桌子', '倒垃圾', '輪空'];
+  var job = ['清理瑪莉亞', '拖地', '水槽擦桌子', '倒垃圾', '輪空'];
   var people = ['@meow820730', '@rdjue', '@q0821', '@shingo0620', '@jerouslu'];
   var finalJob = [];
   var tempJob = [];
