@@ -23,18 +23,18 @@ module.exports = function (robot) {
     }
   });
 
-  robot.hear(/ (.*) 輪空，抽打掃/, function(res) {
+  robot.hear(/(.*) 輪空，抽打掃/, function(res) {
     var freePeople = res.match[1];
     var clearPeoples = peoples.filter(function (people){
       return people !== freePeople;
     });
-    var clearJob = jobs.filter(function (job){
+    var clearJobs = jobs.filter(function (job){
       return job !== '輪空'; 
     });
-
-    clearJob.shuffle();
-    for (var i = 0; i < clearJob.length; i++) {
-      res.send(clearPeoples[i] + '：' + clearJob[i]);
+    
+    clearJobs.shuffle();
+    for (var i = 0; i < clearJobs.length; i++) {
+      res.send(clearPeoples[i] + '：' + clearJobs[i]);
     }
     res.send(freePeople + '：輪空');
   });
