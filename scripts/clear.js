@@ -1,7 +1,8 @@
 module.exports = function (robot) {
 
-  var jobs = ['清理瑪莉亞', '拖地', '水槽擦桌子', '倒垃圾', '輪空'];
-  var peoples = ['@rdjue', '@q0821', '@shingo0620', '@jerouslu', '@meow820730'];
+  // var jobs = ['清理瑪莉亞', '拖地', '水槽擦桌子', '倒垃圾', '輪空'];
+  var jobs = ['清理瑪莉亞', '拖地', '水槽擦桌子', '倒垃圾'];
+  var peoples = ['@rdjue', '@q0821', '@shingo0620', '@jerouslu'];
 
   Array.prototype.shuffle = function () {
     this.forEach(function (el, index, origin) {
@@ -29,9 +30,9 @@ module.exports = function (robot) {
       return people !== freePeople;
     });
     var clearJobs = jobs.filter(function (job){
-      return job !== '輪空'; 
+      return job !== '輪空';
     });
-    
+
     clearJobs.shuffle();
     for (var i = 0; i < clearJobs.length; i++) {
       res.send(clearPeoples[i] + '：' + clearJobs[i]);
