@@ -20,10 +20,12 @@
     "hubot-rules": "^0.1.2",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
-    "hubot-slack": "^4.3.4",
+    "hubot-slack": "^4.5.2",
     "hubot-who-am-i": "^0.2.1",
-    "request": "^2.81.0",
-    "request-promise": "^4.2.1"
+    "node-opencc": "^2.0.1",
+    "opencc": "^1.0.5",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
   },
   "engines": {
     "node": "0.10.x"
