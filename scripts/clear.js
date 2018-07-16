@@ -14,29 +14,35 @@ module.exports = function (robot) {
   }
 
   robot.hear(/開始抽打掃/, function (res) {
-    res.send('@channel 開始抽打掃囉，輸入「好手氣」電腦幫大家抽，或「@user 輪空，抽打掃」來設定誰輪空');
+    if (res.envelope.room === 'C0Q32Q4GZ') {
+      res.send('@channel 開始抽打掃囉，輸入「好手氣」電腦幫大家抽，或「@user 輪空，抽打掃」來設定誰輪空');
+    }
   });
 
   robot.hear(/好手氣/, function (res) {
-    jobs.shuffle();
-    for (var i = 0; i < jobs.length; i++) {
-      res.send(peoples[i] + '：' + jobs[i]);
+    if (res.envelope.room === 'C0Q32Q4GZ') {
+      jobs.shuffle();
+      for (var i = 0; i < jobs.length; i++) {
+        res.send(peoples[i] + '：' + jobs[i]);
+      }
     }
   });
 
   robot.hear(/(.*) 輪空，抽打掃/, function(res) {
-    var freePeople = res.match[1];
-    var clearPeoples = peoples.filter(function (people){
-      return people !== freePeople;
-    });
-    var clearJobs = jobs.filter(function (job){
-      return job !== '輪空';
-    });
+    if (res.envelope.room === 'C0Q32Q4GZ') {
+      var freePeople = res.match[1];
+      var clearPeoples = peoples.filter(function (people){
+        return people !== freePeople;
+      });
+      var clearJobs = jobs.filter(function (job){
+        return job !== '輪空';
+      });
 
-    clearJobs.shuffle();
-    for (var i = 0; i < clearJobs.length; i++) {
-      res.send(clearPeoples[i] + '：' + clearJobs[i]);
+      clearJobs.shuffle();
+      for (var i = 0; i < clearJobs.length; i++) {
+        res.send(clearPeoples[i] + '：' + clearJobs[i]);
+      }
+      res.send(freePeople + '：輪空');
     }
-    res.send(freePeople + '：輪空');
   });
 }
