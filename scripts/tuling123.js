@@ -1,5 +1,5 @@
 const opencc = require('node-opencc');
-const config = require('../config/config.json');
+const config = require('../bin/config.json');
 
 module.exports = function (robot) {
 
