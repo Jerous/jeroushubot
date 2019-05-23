@@ -5,12 +5,12 @@ const simpleGit = require('simple-git')();
 const simpleGitPromise = require('simple-git/promise')();
 
 // Repo name
-const repo = 'jeroushubot';  //Repo name
+// const repo = 'jeroushubot';  //Repo name
 // User name and password of your GitHub
-const userName = myConfig.github.username;
-const password = myConfig.github.password;
+// const userName = myConfig.github.username;
+// const password = myConfig.github.password;
 // Set up GitHub url like this so no manual entry of user pass needed
-const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo}`;
+// const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo}`;
 // add local git config like username and email
 // simpleGit.addConfig('user.email','tlu37317@gmail.com');
 // simpleGit.addConfig('user.name','Jerous');
@@ -18,24 +18,22 @@ const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 // Add all files for commit
 simpleGitPromise.add('.')
-  .then(
-      (addSuccess) => {
-        console.log(addSuccess);
-      }, (failedAdd) => {
-        console.log('adding files failed');
-  });
+.then((addSuccess) => {
+  console.log(addSuccess);
+}, (failedAdd) => {
+  console.log('adding files failed');
+});
 // Commit files as Initial Commit
 simpleGitPromise.commit('Intial commit by simplegit')
-   .then(
-      (successCommit) => {
-        console.log(successCommit);
-     }, (failed) => {
-        console.log('failed commmit');
- });
+.then((successCommit) => {
+  console.log(successCommit);
+}, (failed) => {
+  console.log('failed commmit');
+});
 // Finally push to online repository
 simpleGitPromise.push('origin','master')
-    .then((success) => {
-       console.log('repo successfully pushed');
-    },(failed)=> {
-       console.log('repo push failed');
+.then((success) => {
+  console.log('repo successfully pushed');
+},(failed)=> {
+  console.log('repo push failed');
 });
