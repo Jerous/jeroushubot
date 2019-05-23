@@ -12,7 +12,7 @@ const simpleGitPromise = require('simple-git/promise')();
 // Set up GitHub url like this so no manual entry of user pass needed
 // const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo}`;
 // add local git config like username and email
-// simpleGit.addConfig('user.email','tlu37317@gmail.com');
+// simpleGit.addConfig('user.email',myConfig.github.email);
 // simpleGit.addConfig('user.name','Jerous');
 // // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
