@@ -25,7 +25,8 @@
     "node-opencc": "^2.0.1",
     "opencc": "^1.0.5",
     "request": "^2.87.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "simple-git": "^1.113.0"
   },
   "engines": {
     "node": "0.10.x"
