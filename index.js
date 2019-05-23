@@ -17,12 +17,7 @@ const simpleGitPromise = require('simple-git/promise')();
 // // Add remore repo url as origin to repo
 // simpleGitPromise.addRemote('origin',gitHubUrl);
 // Add all files for commit
-simpleGitPromise.add('.')
-.then((addSuccess) => {
-  console.log(addSuccess);
-}, (failedAdd) => {
-  console.log('adding files failed');
-});
+simpleGitPromise.add('.');
 // Commit files as Initial Commit
 simpleGitPromise.commit('Intial commit by simplegit')
 .then((successCommit) => {
