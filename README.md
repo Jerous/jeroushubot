@@ -157,4 +157,4 @@ Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
 
 ## tellustek-script
 
-好手氣，抽打掃用。
+好手氣，抽打掃用。.
